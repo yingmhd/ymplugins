@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="YMVue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{hello}}</h1>
+    <input type="text" v-model="hello">
+    <button v-on:click="btnClick">点击</button>
+</div>
+<script>
+    let ymvue = new YMVue({
+        el: '#app',
+        data: {
+            hello: 'hello world'
+        },
+        methods: {
+            mounted() {
+                console.log(this)
+            },
+            btnClick() {
+                this.hello = 'Hello Vue'
+            }
+        }
+    });
+</script>
+</body>
+</html>
