@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>前端三驾马车</p>
+<ul>
+    <li><a ym-link="/angularJs" >angular</a></li>
+    <li><a ym-link="/vue">vue</a></li>
+    <li><a ym-link="/react">react</a></li>
+</ul>
+<!-- 路由部分代码 -->
+<div id="ymapp">
+</div>
+<script src="YMRouter.js"></script>
+<script>
+    window.onload = function() {
+        $YMRouter.init({
+            mode: 'history',
+            list: {
+                '/angularJs': 'this is the page of angularJs',
+                '/vue': 'this is the page of vue',
+                '/react': 'this is the page of react'
+            }
+        })
+    }
+</script>
+</body>
+</html>
